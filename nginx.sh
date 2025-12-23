@@ -14,7 +14,7 @@ apt install nginx -y
 echo "Creating Nginx configuration file for vproapp..."
 cat <<EOL > /etc/nginx/sites-available/vproapp
 upstream vproapp {
-    server app01:8080;
+    server app01.vprofile:8080;
 }
 server {
     listen 80;
@@ -37,3 +37,4 @@ echo "Restarting Nginx..."
 systemctl restart nginx
 
 echo "Nginx setup and configuration is complete."
+
