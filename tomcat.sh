@@ -73,6 +73,7 @@ firewall-cmd --reload
 # Code build & deploy
 # Download source code
 echo "Downloading source code..."
+mkdir -p /home/vagrant
 cd /home/vagrant
 git clone -b Master https://github.com/abdelrahmanonline4/sourcecodeseniorwr.git
 
@@ -96,3 +97,4 @@ chown -R tomcat:tomcat /usr/local/tomcat/webapps
 systemctl start tomcat
 
 echo "Tomcat setup and deployment is complete."
+
