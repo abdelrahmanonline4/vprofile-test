@@ -58,10 +58,11 @@ echo "Restarting MariaDB service..."
 systemctl restart mariadb
 
 # Start and configure the firewall to allow access to MariaDB on port 3306
-echo "Configuring firewall..."
-systemctl start firewalld
-systemctl enable firewalld
-firewall-cmd --zone=public --add-port=3306/tcp --permanent
-firewall-cmd --reload
+# echo "Configuring firewall..."
+# systemctl start firewalld
+# systemctl enable firewalld
+# firewall-cmd --zone=public --add-port=3306/tcp --permanent
+# firewall-cmd --reload
 
 echo "MariaDB setup is complete."
+
